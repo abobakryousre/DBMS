@@ -336,6 +336,8 @@ function help()
             clear
             break
             ;;
+        *)
+            echo "Enter value in range 1 -> 9"
         esac
     done
     
@@ -961,7 +963,6 @@ function isColumnPk()
 }
 
 function updateTable()
-
 {
     # will update the all column with the same value, if there is no where condition
     # arguments: table name, arguments

@@ -14,6 +14,7 @@
 
 tmp=$(mktemp) # create temprary file to have the queries.
 trap "rm -f $tmp" EXIT
+
 echo "Welcom $USER......" 
 echo "you can type exit any time you would like to close the program"
 
@@ -59,7 +60,7 @@ function creatDataBase()
         mkdir "$path"
         echo "DataBase with name $databaseName created"
     fi 
-    else echo name of database  $databaseName has create database gh_a invalid letter try enter another name
+    else echo name of database  $databaseName is invalid try enter another name
     fi
 }
 
@@ -89,7 +90,7 @@ function openDatabase()
     fi
 }
 
-function deletdDtabase()
+function deleteDtabase()
 {
     #echo "enter name of Data Base you want delet " #delet database good
     path="$HOME/DBMS/$databaseName"
@@ -165,7 +166,7 @@ function excuteQuery()
         openDatabase $databaseName
     ;;
     "delete database")
-         deletDatabase $databaseName
+         deleteDtabase $databaseName
     ;;
     "exit")
         let flag=0
